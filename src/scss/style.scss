@@ -249,3 +249,31 @@ ul {
   margin: 0 auto;
   border-radius: 50%;
 }
+.about {
+  font-family: "Poppins", sans-serif;
+}
+.gap {
+  margin-left: 90px;
+}
+.tag ul li {
+  margin: 0px 6px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 4px 0px;
+  display: inline-block;
+}
+.tag ul li span {
+  border: 1px solid #0bceaf;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.tag ul li span:hover {
+  background: transparent !important;
+}
+.btn-danger {
+  background-color: #24cdd5;
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 50px;
+}
