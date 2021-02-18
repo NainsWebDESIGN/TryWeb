@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/* * {
-  font-family: "Oswald", "Roboto", "Poppins", sans-serif;
-} */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -53,6 +50,20 @@ ul {
   position: relative;
   transition: all 0.7s;
   z-index: 9;
+}
+.header .wrap {
+  width: 1140px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.header.sticky {
+  width: 100%;
+  position: flex;
+  background: #212529;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
 }
 .header .logo {
   margin: 0;
@@ -139,4 +150,47 @@ ul {
 .header .sidemenu .close::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 13px;
+  height: 28px;
+  width: 2px;
+  background: #fff;
+}
+.header .sidemenu .close::before {
+  transform: rotate(45deg);
+}
+.header .sidemenu .close::after {
+  transform: rotate(-45deg);
+}
+.header .sidemenu nav ul {
+  padding-top: 30px;
+}
+.header .sidemenu nav li {
+  padding: 15px 0;
+}
+.header .sidemenu nav a {
+  font-size: 1.3rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header .sidemenu footer {
+  padding-top: 100px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.header .sidemenu footer .social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.header .sidemenu footer .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  margin-right: 5px;
+  text-transform: uppercase;
 }

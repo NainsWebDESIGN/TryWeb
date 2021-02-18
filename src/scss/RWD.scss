@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+  .header .sidemenu {
+    width: 100%;
+  }
+  .header .sidemenu nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .header .sidemenu {
+    width: 70%;
+  }
+  .header .sidemenu nav a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header .menu {
+    display: none;
+  }
+} ;

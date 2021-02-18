@@ -1,38 +1,47 @@
-<header class="header">
-  <div class="wrap d-flex">
-    <h1 class="logo">
-      <a href="#"><img src="assets/image/LOGO.png" alt=""></a>
-    </h1>
-    <nav class="menu">
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Pages</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Gallery</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+<main>
+  <header [class.sticky]="Sticky" class="header">
+    <div class="wrap d-flex">
+      <h1 class="logo">
+        <a><img src="assets/image/LOGO.png" alt=""></a>
+      </h1>
+      <nav class="menu">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Pages</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Gallery</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <a href="#" class="sidemenu-toggler">
-    <span></span>
-    <span></span>
-    <span></span>
-  </a>
+    <a class="sidemenu-toggler" (click)="MenuEffects()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
 
-  <div class="sidemenu">
-    <a href="#" class="close"></a>
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Pages</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Gallery</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-    <app_footer></app_footer>
-  </div>
-</header>
+    <div [class.active]="menu" class="sidemenu">
+      <a class="close" (click)="MenuEffects()"></a>
+      <nav>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Pages</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Gallery</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+      <footer>
+        <div class="social">
+          <a><img src="assets/image/facebook.png" alt=""></a>
+          <a><img src="assets/image/ig.png" alt=""></a>
+          <a><img src="assets/image/phone.png" alt=""></a>
+        </div>
+        <p>2020-2021, Made with love by <a>Nains</a> Designers</p>
+      </footer>
+    </div>
+  </header>
+</main>
