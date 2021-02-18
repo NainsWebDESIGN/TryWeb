@@ -134,3 +134,9 @@ ul {
   right: 20px;
   top: 24px;
 }
+
+.header .sidemenu .close::before,
+.header .sidemenu .close::after {
+  content: "";
+  position: absolute;
+}
