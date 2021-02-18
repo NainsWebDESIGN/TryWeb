@@ -20,4 +20,20 @@
   .header .menu {
     display: none;
   }
-} ;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  width: 10px;
+  background: #212529;
+  border-left: 0 solid #fff;
+  border-right: 0 solid #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #3bb78f;
+  width: 0;
+  height: 35%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}

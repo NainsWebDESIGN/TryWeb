@@ -194,3 +194,58 @@ ul {
   margin-right: 5px;
   text-transform: uppercase;
 }
+.hero {
+  margin-top: 100px;
+}
+.hero-text {
+  font-family: "Poppins", sans-serif;
+}
+.title {
+  background-color: #0bceaf;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px 30px;
+  border-radius: 20px 20px 20px 0px;
+}
+.name {
+  font-size: 80px;
+  letter-spacing: -1px;
+}
+.designation {
+  font-size: 30px;
+}
+.email {
+  margin-top: 40px !important;
+  font-family: "Poppins", sans-serif;
+}
+.social-icons li {
+  list-style: none;
+  margin-right: 30px;
+  margin-top: 40px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.hero-img {
+  margin-left: 140px;
+  margin-top: -40px;
+}
+.hero-img img {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+  border: 20px solid rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17), 0 0 20px rgba(0, 0, 0, 0.17),
+    0 0 40px rgba(0, 0, 0, 0.17), 0 0 80px rgba(0, 0, 0, 0.17),
+    0 0 120px rgba(0, 0, 0, 0.17);
+  border-radius: 50%;
+}
+.img-border {
+  height: 310px;
+  width: 310px;
+  border: 20px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.07), 0 0 20px rgba(0, 0, 0, 0.07),
+    0 0 40px rgba(0, 0, 0, 0.07), 0 0 80px rgba(0, 0, 0, 0.07),
+    0 0 120px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  border-radius: 50%;
+}
