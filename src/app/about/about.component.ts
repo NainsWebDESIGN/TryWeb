@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  data: any = ["Html & CSS", "Javascript", "Angular", "PHP", "Google Ads", "SEO"];
   constructor() { }
 
   ngOnInit() {

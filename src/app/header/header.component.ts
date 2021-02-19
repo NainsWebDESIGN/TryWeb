@@ -7,6 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menu: boolean = false;
+  header: any = ["Home", "About", "Pages", "Blog", "Gallery", "Contact"];
   Sticky: boolean = false;
   @HostListener('window:scroll', ['$event'])
   Scroll(_Event: any) {

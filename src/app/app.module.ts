@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -13,18 +14,19 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 @NgModule({
-  declarations: [						
+  declarations: [
     AppComponent,
     HeaderComponent,
-      HomeComponent,
-      AboutComponent,
-      DevelopmentComponent,
-      Skills_chartComponent,
-      EducationComponent,
-      PortfolioComponent
-   ],
+    HomeComponent,
+    AboutComponent,
+    DevelopmentComponent,
+    Skills_chartComponent,
+    EducationComponent,
+    PortfolioComponent
+  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

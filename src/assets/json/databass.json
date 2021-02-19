@@ -1,0 +1,38 @@
+{
+  "development": [
+    [
+      {
+        "name": "Html & CSS",
+        "style": "fa fa-bullseye purple-color",
+        "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+      },
+      {
+        "name": "Javascript",
+        "style": "fa fa-code iron-color",
+        "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+      },
+      {
+        "name": "Angular",
+        "style": "fa fa-object-ungroup sky-color",
+        "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+      }
+    ],
+    [
+      {
+        "name": "PHP",
+        "style": "fa fa-bullseye purple-color",
+        "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+      },
+      {
+        "name": "Google Ads",
+        "style": "fa fa-code iron-color",
+        "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+      },
+      {
+        "name": "SEO",
+        "style": "fa fa-object-ungroup sky-color",
+        "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+      }
+    ]
+  ]
+}

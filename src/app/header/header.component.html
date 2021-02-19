@@ -2,16 +2,11 @@
   <header [class.sticky]="Sticky" class="header">
     <div class="wrap d-flex">
       <h1 class="logo">
-        <a><img src="assets/image/LOGO.png" alt=""></a>
+        <a href=""><img src="assets/image/LOGO.png" alt=""></a>
       </h1>
       <nav class="menu">
         <ul>
-          <li><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Pages</a></li>
-          <li><a>Blog</a></li>
-          <li><a>Gallery</a></li>
-          <li><a>Contact</a></li>
+          <li *ngFor="let even of header"><a href="">{{even}}</a></li>
         </ul>
       </nav>
     </div>
@@ -26,21 +21,16 @@
       <a class="close" (click)="MenuEffects()"></a>
       <nav>
         <ul>
-          <li><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Pages</a></li>
-          <li><a>Blog</a></li>
-          <li><a>Gallery</a></li>
-          <li><a>Contact</a></li>
+          <li *ngFor="let even of header"><a href="">{{even}}</a></li>
         </ul>
       </nav>
       <footer>
         <div class="social">
-          <a><img src="assets/image/facebook.png" alt=""></a>
-          <a><img src="assets/image/ig.png" alt=""></a>
-          <a><img src="assets/image/phone.png" alt=""></a>
+          <a href=""><img src="assets/image/facebook.png" alt=""></a>
+          <a href=""><img src="assets/image/ig.png" alt=""></a>
+          <a href=""><img src="assets/image/phone.png" alt=""></a>
         </div>
-        <p>2020-2021, Made with love by <a>Nains</a> Designers</p>
+        <p>2020-2021, Made with love by <a href="">Nains</a> Designers</p>
       </footer>
     </div>
   </header>
