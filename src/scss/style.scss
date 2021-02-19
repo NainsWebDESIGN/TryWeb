@@ -74,7 +74,11 @@ ul {
   display: block;
 }
 .header .logo img {
-  width: 190px;
+  width: 94px;
+}
+.header .menu {
+  height: 126px;
+  line-height: 72px;
 }
 .header .menu ul {
   display: flex;
@@ -96,7 +100,7 @@ ul {
   position: absolute;
   width: 40px;
   padding: 6px;
-  top: 23px;
+  top: 44px;
   right: 40px;
 }
 .header .sidemenu-toggler > span {
@@ -276,4 +280,71 @@ ul {
   padding: 14px 20px;
   border: none;
   border-radius: 50px;
+}
+.mh-service .mh-service-item {
+  padding: 20px;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+}
+.mh-service .mh-service-item .fa {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 16px;
+}
+.mh-service .mh-service-item .fa.purple-color {
+  color: #9774fa;
+}
+.mh-service .mh-service-item .fa.iron-color {
+  color: #ed7256;
+}
+.mh-service .mh-service-item .fa.sky-color {
+  color: #2796e2;
+}
+.mh-service h3 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 18px;
+  font-size: 25px;
+  line-height: 34px;
+}
+
+.mh-skills .mh-professional-skill {
+  padding-right: 60px;
+  color: #fff;
+}
+.mh-skills .mh-professional-skill h3 {
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+}
+.mh-professional-skills {
+  padding-left: 20%;
+}
+.mh-professional-skills h3 {
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+}
+.mh-professional-progress li {
+  display: inline-block;
+  margin: 0 auto;
+  float: none;
+  width: 48%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.mh-progress {
+  margin-bottom: 10px;
+  font-family: cursive;
+  // font: 900 1.14285/1 Cinzerl, cursive;
+  color: #fff;
+}
+.mh-progress .progressbar-text {
+  color: inherit !important;
+  font-family: "Poppins", sans-serif;
 }

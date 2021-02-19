@@ -7,15 +7,17 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DevelopmentComponent } from './development/development.component';
+import { Skills_chartComponent } from './skills_chart/skills_chart.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     HeaderComponent,
       HomeComponent,
       AboutComponent,
-      DevelopmentComponent
+      DevelopmentComponent,
+      Skills_chartComponent
    ],
   imports: [
     BrowserModule
