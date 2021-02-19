@@ -9,17 +9,19 @@ import { AboutComponent } from './about/about.component';
 import { DevelopmentComponent } from './development/development.component';
 import { Skills_chartComponent } from './skills_chart/skills_chart.component';
 import { EducationComponent } from './education/education.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
     HeaderComponent,
       HomeComponent,
       AboutComponent,
       DevelopmentComponent,
       Skills_chartComponent,
-      EducationComponent
+      EducationComponent,
+      PortfolioComponent
    ],
   imports: [
     BrowserModule
