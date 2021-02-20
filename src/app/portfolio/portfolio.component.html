@@ -8,19 +8,19 @@
       <div class="part col-sm-12">
         <div class="col-sm-12 portfolio-nav" id="filter-button">
           <ul>
-            <li data-filter="*" class="current">
+            <li [class.current]="header == '*'" (click)="check('*')">
               <span>All Categories</span>
             </li>
-            <li data-filter=".user-interface">
+            <li [class.current]="header == 'user-interface'" (click)="check('user-interface')">
               <span>Web Design</span>
             </li>
-            <li data-filter=".branding">
+            <li [class.current]="header == 'branding'" (click)="check('branding')">
               <span>Branding</span>
             </li>
-            <li data-filter=".mockup">
+            <li [class.current]="header == 'mockup'" (click)="check('mockup')">
               <span>Mockups</span>
             </li>
-            <li data-filter=".ui">
+            <li [class.current]="header == 'ui'" (click)="check('ui')">
               <span>Photography</span>
             </li>
           </ul>
