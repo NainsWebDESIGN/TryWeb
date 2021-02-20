@@ -11,10 +11,11 @@ import { DevelopmentComponent } from './development/development.component';
 import { Skills_chartComponent } from './skills_chart/skills_chart.component';
 import { EducationComponent } from './education/education.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     HomeComponent,
@@ -22,8 +23,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     DevelopmentComponent,
     Skills_chartComponent,
     EducationComponent,
-    PortfolioComponent
-  ],
+    PortfolioComponent,
+      PricingComponent
+   ],
   imports: [
     BrowserModule,
     HttpClientModule
