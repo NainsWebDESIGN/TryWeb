@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  data: any = { title: [], content: [] };
   header: string = '*';
-  constructor() { }
+  constructor(private http: HttpClient) { }
   check(_Name: string) {
     this.header = _Name;
     switch (_Name) {
@@ -21,6 +23,10 @@ export class PortfolioComponent implements OnInit {
     }
   }
   ngOnInit() {
+    this.http.get('assets/json/databass.json').subscribe((el: any) => {
+      this.data.title = el.portfolio.header;
+      this.data.content = el.portfolio.content;
+    })
   }
 
 }

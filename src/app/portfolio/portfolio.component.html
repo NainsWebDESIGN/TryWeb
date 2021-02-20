@@ -8,121 +8,24 @@
       <div class="part col-sm-12">
         <div class="col-sm-12 portfolio-nav" id="filter-button">
           <ul>
-            <li [class.current]="header == '*'" (click)="check('*')">
-              <span>All Categories</span>
+
+            <li *ngFor="let even of data.title" [class.current]="header == even.value" (click)="check(even.value)">
+              <span>{{even.title}}</span>
             </li>
-            <li [class.current]="header == 'user-interface'" (click)="check('user-interface')">
-              <span>Web Design</span>
-            </li>
-            <li [class.current]="header == 'branding'" (click)="check('branding')">
-              <span>Branding</span>
-            </li>
-            <li [class.current]="header == 'mockup'" (click)="check('mockup')">
-              <span>Mockups</span>
-            </li>
-            <li [class.current]="header == 'ui'" (click)="check('ui')">
-              <span>Photography</span>
-            </li>
+
           </ul>
         </div>
 
         <div class="mh-project-gallery col-sm-12" id="mh-project-gallery">
           <div class="portfolioContainer row">
-            <div class="user-interface col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g1.jpg" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
 
-            <div class="ui mockup col-md-4 grid-item">
+            <div *ngFor="let even of data.content" [class]="even.filter + ' col-md-4 grid-item'">
               <figure>
-                <img src="assets/image/g2.png" alt="">
+                <img [src]="even.image" alt="">
                 <figcaption class="fig-caption">
                   <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="user-interface col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g3.png" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="branding col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g4.png" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="user-interface col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g5.png" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="mockup col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g6.png" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="ui branding col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g7.jpg" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="user-interface mockup col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g8.png" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="user-interface ui col-md-4 grid-item">
-              <figure>
-                <img src="assets/image/g9.png" alt="">
-                <figcaption class="fig-caption">
-                  <i class="fa fa-search"></i>
-                  <h5 class="title">Creative Design</h5>
-                  <span class="sub-title">Photography</span>
+                  <h5 class="title">{{even.title}}</h5>
+                  <span class="sub-title">{{even.subtitle}}</span>
                 </figcaption>
               </figure>
             </div>

@@ -6,7 +6,7 @@
       </h1>
       <nav class="menu">
         <ul>
-          <li *ngFor="let even of header"><a href="">{{even}}</a></li>
+          <li *ngFor="let even of header"><a [href]="even.href">{{even.title}}</a></li>
         </ul>
       </nav>
     </div>
@@ -18,10 +18,10 @@
     </a>
 
     <div [class.active]="menu" class="sidemenu">
-      <a class="close" (click)="MenuEffects()"></a>
+      <a class="close" (click)="MenuEffects('')"></a>
       <nav>
         <ul>
-          <li *ngFor="let even of header"><a href="">{{even}}</a></li>
+          <li *ngFor="let even of header" (click)='MenuEffects("false")'><a [href]="even.href">{{even.title}}</a></li>
         </ul>
       </nav>
       <footer>

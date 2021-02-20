@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app_header',
@@ -7,7 +8,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menu: boolean = false;
-  header: any = ["Home", "About", "Pages", "Blog", "Gallery", "Contact"];
+  header: any = [];
   Sticky: boolean = false;
   @HostListener('window:scroll', ['$event'])
   Scroll(_Event: any) {
@@ -19,11 +20,21 @@ export class HeaderComponent implements OnInit {
     let scrollTop = _Event.path[0].scrollingElement.scrollTop;
     this.Sticky = (scrollTop > 0) ? true : false;
   }
-  constructor() { }
-  MenuEffects() {
-    this.menu = !this.menu;
+  constructor(private http: HttpClient) { }
+  MenuEffects(_Boolin: string) {
+    switch (_Boolin) {
+      case 'false':
+        this.menu = false;
+        break;
+      default:
+        this.menu = !this.menu;
+        break;
+    }
   }
   ngOnInit() {
+    this.http.get('assets/json/databass.json').subscribe((el: any) => {
+      this.header = el.header;
+    })
   }
 
 }

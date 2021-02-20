@@ -21,36 +21,14 @@
           <h3>Work Experience</h3>
           <div class="mh-experience-details">
 
-            <div class="mh-work-item">
-              <h4>UI/UX Designer <a href="">Kurage Digital Workshop</a></h4>
-              <div class="mh-eduyear">2018-2021</div>
-              <span>Responsibility</span>
-              <ul class="work-reponsibility">
-                <li><i class="fa fa-tick"></i>Validate CSS</li>
-                <li><i class="fa fa-tick"></i>Project Management</li>
+            <div class="mh-work-item" *ngFor="let even of data.experience">
+              <h4>{{even.title}}<a [href]="even.href">{{even.btn}}</a></h4>
+              <div class="mh-eduyear">{{even.date}}</div>
+              <span>{{even.content}}</span>
+              <ul class="work-reponsibility" *ngFor="let value of even.li">
+                <li><i class="fa fa-tick"></i>{{value}}</li>
               </ul>
             </div>
-
-            <div class="mh-work-item">
-              <h4>UI/UX Designer <a href="">Kurage Digital Workshop</a></h4>
-              <div class="mh-eduyear">2018-2021</div>
-              <span>Responsibility</span>
-              <ul class="work-reponsibility">
-                <li><i class="fa fa-tick"></i>Validate CSS</li>
-                <li><i class="fa fa-tick"></i>Project Management</li>
-              </ul>
-            </div>
-
-            <div class="mh-work-item">
-              <h4>UI/UX Designer <a href="">Kurage Digital Workshop</a></h4>
-              <div class="mh-eduyear">2018-2021</div>
-              <span>Responsibility</span>
-              <ul class="work-reponsibility">
-                <li><i class="fa fa-tick"></i>Validate CSS</li>
-                <li><i class="fa fa-tick"></i>Project Management</li>
-              </ul>
-            </div>
-
 
           </div>
         </div>

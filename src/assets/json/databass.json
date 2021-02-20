@@ -1,4 +1,30 @@
 {
+  "header": [
+    {
+      "title": "Home",
+      "href": "#"
+    },
+    {
+      "title": "About",
+      "href": "#about"
+    },
+    {
+      "title": "Pages",
+      "href": "#mh-skills"
+    },
+    {
+      "title": "Blog",
+      "href": "#mh-blog"
+    },
+    {
+      "title": "Gallery",
+      "href": "#mh-portfolio"
+    },
+    {
+      "title": "Contact",
+      "href": "#pricing"
+    }
+  ],
   "development": [
     [
       {
@@ -101,6 +127,169 @@
         "content": "Our daily mission : find and showcase the best web design inspirations and trends. Every day, we publish fresh and creative new websites ideas made by creative agencies and web designers from all over the world."
       }
     ],
-    "experience": []
-  }
+    "experience": [
+      {
+        "title": "UI/UX Designer ",
+        "href": "",
+        "btn": "Kurage Digital Workshop",
+        "date": "2018-2021",
+        "content": "Responsibility",
+        "li": ["Validate CSS", "Project Management"]
+      },
+      {
+        "title": "UI/UX Designer ",
+        "href": "",
+        "btn": "Kurage Digital Workshop",
+        "date": "2018-2021",
+        "content": "Responsibility",
+        "li": ["Validate CSS", "Project Management"]
+      },
+      {
+        "title": "UI/UX Designer ",
+        "href": "",
+        "btn": "Kurage Digital Workshop",
+        "date": "2018-2021",
+        "content": "Responsibility",
+        "li": ["Validate CSS", "Project Management"]
+      }
+    ]
+  },
+  "portfolio": {
+    "header": [
+      {
+        "title": "All Categories",
+        "value": "*"
+      },
+      {
+        "title": "Web Design",
+        "value": "Web"
+      },
+      {
+        "title": "Branding",
+        "value": "branding"
+      },
+      {
+        "title": "Mockups",
+        "value": "mockup"
+      },
+      {
+        "title": "Photography",
+        "value": "ui"
+      }
+    ],
+    "content": [
+      {
+        "filter": "Web",
+        "image": "assets/image/g1.jpg",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "ui mockup",
+        "image": "assets/image/g2.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "Web",
+        "image": "assets/image/g3.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "branding",
+        "image": "assets/image/g4.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "Web",
+        "image": "assets/image/g5.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "mockup",
+        "image": "assets/image/g6.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "ui branding",
+        "image": "assets/image/g7.jpg",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "Web mockup",
+        "image": "assets/image/g8.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      },
+      {
+        "filter": "Web ui",
+        "image": "assets/image/g9.png",
+        "title": "Creative Design",
+        "subtitle": "Photography"
+      }
+    ]
+  },
+  "pricing": [
+    {
+      "style": "fa fa-calendar",
+      "title": "Full-time work",
+      "content": "I am available for full time",
+      "price": "45000",
+      "work": [
+        "Web Development",
+        "Advertising",
+        "Game Development",
+        "Music writing"
+      ]
+    },
+    {
+      "style": "fa fa-file",
+      "title": "Fixed Price Project",
+      "content": "I am available for full time",
+      "price": "30000",
+      "work": [
+        "Web Development",
+        "Advertising",
+        "Game Development",
+        "Music writing"
+      ]
+    },
+    {
+      "style": "fa fa-calendar",
+      "title": "Hourly Work",
+      "content": "I am available for Hourly Project",
+      "price": "1500",
+      "work": [
+        "Web Development",
+        "Advertising",
+        "Game Development",
+        "Music writing"
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "image": "assets/image/b-3.png",
+      "date": "25.11.21",
+      "name": "Berry Theme",
+      "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+    },
+    {
+      "image": "assets/image/b-2.png",
+      "date": "25.11.21",
+      "name": "Berry Theme",
+      "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+    },
+    {
+      "image": "assets/image/b-1.png",
+      "date": "25.11.21",
+      "name": "Berry Theme",
+      "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
+    }
+  ]
 }
