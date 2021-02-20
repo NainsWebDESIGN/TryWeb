@@ -6,34 +6,10 @@
           <h3>Education</h3>
           <div class="mh-education-details">
 
-            <div class="mh-education-item">
-              <h4>Art & Multimedia From <a href="">LCCNET Liancheng</a></h4>
-              <div class="mh-eduyear">2018-2021</div>
-              <p>
-                Our daily mission : find and showcase the best web design inspirations and
-                trends. Every day, we publish fresh and creative new websites ideas made by
-                creative agencies and web designers from all over the world.
-              </p>
-            </div>
-
-            <div class="mh-education-item">
-              <h4>Art & Multimedia From <a href="">LCCNET Liancheng</a></h4>
-              <div class="mh-eduyear">2018-2021</div>
-              <p>
-                Our daily mission : find and showcase the best web design inspirations and
-                trends. Every day, we publish fresh and creative new websites ideas made by
-                creative agencies and web designers from all over the world.
-              </p>
-            </div>
-
-            <div class="mh-education-item">
-              <h4>Art & Multimedia From <a href="">LCCNET Liancheng</a></h4>
-              <div class="mh-eduyear">2018-2021</div>
-              <p>
-                Our daily mission : find and showcase the best web design inspirations and
-                trends. Every day, we publish fresh and creative new websites ideas made by
-                creative agencies and web designers from all over the world.
-              </p>
+            <div class="mh-education-item" *ngFor="let even of data.education">
+              <h4>{{even.title}}<a [href]="even.href">{{even.btn}}</a></h4>
+              <div class="mh-eduyear">{{even.date}}</div>
+              <p>{{even.content}}</p>
             </div>
 
           </div>

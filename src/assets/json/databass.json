@@ -34,5 +34,73 @@
         "content": "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work."
       }
     ]
-  ]
+  ],
+  "skills": {
+    "line": [
+      {
+        "name": "Angular",
+        "num": "86%",
+        "style": "86"
+      },
+      {
+        "name": "Javascript",
+        "num": "49%",
+        "style": "49"
+      },
+      {
+        "name": "Html & CSS",
+        "num": "31%",
+        "style": "31"
+      },
+      {
+        "name": "PHP",
+        "num": "27%",
+        "style": "27"
+      }
+    ],
+    "circle": [
+      {
+        "name": "Communcation",
+        "progress": "95"
+      },
+      {
+        "name": "Team Work",
+        "progress": "55"
+      },
+      {
+        "name": "Project Management",
+        "progress": "86"
+      },
+      {
+        "name": "Creativity",
+        "progress": "95"
+      }
+    ]
+  },
+  "Education": {
+    "education": [
+      {
+        "title": "Art & Multimedia From ",
+        "href": "",
+        "btn": "LCCNET Liancheng",
+        "date": "2018-2021",
+        "content": "Our daily mission : find and showcase the best web design inspirations and trends. Every day, we publish fresh and creative new websites ideas made by creative agencies and web designers from all over the world."
+      },
+      {
+        "title": "Art & Multimedia From ",
+        "href": "",
+        "btn": "LCCNET Liancheng",
+        "date": "2018-2021",
+        "content": "Our daily mission : find and showcase the best web design inspirations and trends. Every day, we publish fresh and creative new websites ideas made by creative agencies and web designers from all over the world."
+      },
+      {
+        "title": "Art & Multimedia From ",
+        "href": "",
+        "btn": "LCCNET Liancheng",
+        "date": "2018-2021",
+        "content": "Our daily mission : find and showcase the best web design inspirations and trends. Every day, we publish fresh and creative new websites ideas made by creative agencies and web designers from all over the world."
+      }
+    ],
+    "experience": []
+  }
 }

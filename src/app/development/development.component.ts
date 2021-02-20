@@ -9,10 +9,9 @@ import { HttpClient } from '@angular/common/http';
 export class DevelopmentComponent implements OnInit {
   data: any = [];
   constructor(private http: HttpClient) { }
-
   ngOnInit() {
-    this.http.get('assets/json/databass.json').subscribe(el => {
-      this.data = el;
+    this.http.get('assets/json/databass.json').subscribe((el: any) => {
+      this.data = el.development;
     })
   }
 
