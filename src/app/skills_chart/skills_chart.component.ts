@@ -15,7 +15,6 @@ export class Skills_chartComponent implements OnInit {
     // let bodyH = _Event.path[0].scrollingElement.clientHeight;
     //滾動的高度
     let scrollTop = _Event.path[0].scrollingElement.scrollTop;
-    console.log(scrollTop);
     this.scrollBox = scrollTop > 1585 ? true : false;
   }
   data: any = { line: [], circle: [] };

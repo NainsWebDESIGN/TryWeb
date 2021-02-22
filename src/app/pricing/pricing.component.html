@@ -6,7 +6,8 @@
       </div>
       <br><br><br><br><br>
 
-      <div *ngFor="let even of data" class="col-md-4">
+      <div [ngClass]="{'scroll-runing-r': i == 2, 'scroll-runing-b': i == 1, 'scroll-runing-l': i == 0}"
+        [class.active]="scrollBox" *ngFor="let even of data; let i = index" class="col-md-4">
         <div class="pricing dark-bg">
           <i [class]="even.style"></i>
           <h4>{{even.title}}</h4>

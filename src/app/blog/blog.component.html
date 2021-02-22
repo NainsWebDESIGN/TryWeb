@@ -6,7 +6,8 @@
       </div>
       <br><br><br><br>
 
-      <div *ngFor="let even of data" class="col-md-4">
+      <div [ngClass]="{'scroll-bigrun-r': i == 2, 'scroll-bigrun-b': i == 1, 'scroll-bigrun-l': i == 0}"
+        [class.active]="scrollBox" *ngFor="let even of data; let i = index" class="col-md-4">
         <div class="mh-blog-item dar-bg">
           <img [src]="even.image" alt="" class="img-fluid">
           <div class="blog-inner">
