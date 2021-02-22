@@ -16,7 +16,7 @@ import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
@@ -25,9 +25,9 @@ import { BlogComponent } from './blog/blog.component';
     Skills_chartComponent,
     EducationComponent,
     PortfolioComponent,
-      PricingComponent,
-      BlogComponent
-   ],
+    PricingComponent,
+    BlogComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule
