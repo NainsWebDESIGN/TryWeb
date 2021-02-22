@@ -945,3 +945,8 @@ p.text {
   transform: translate(0) scale(1);
   opacity: 1;
 }
+div.hero-text .homename span,
+div.hero-text .homedes span {
+  position: relative;
+  display: inline-block;
+}
