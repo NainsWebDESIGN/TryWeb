@@ -4,7 +4,7 @@
       <div class="col-smd-12 col-md-6">
         <div class="mh-education">
           <h3>Education</h3>
-          <div [class.active]="scrollBox" class="mh-education-details scroll-tr">
+          <div [class.active]="scroll.ScrollBox.education" class="mh-education-details scroll-tr">
 
             <div class="mh-education-item" *ngFor="let even of data.education; let i = index">
               <h4>{{even.title}}<a [href]="even.href">{{even.btn}}</a></h4>
@@ -19,7 +19,7 @@
       <div class="col-sm-12 col-md-6">
         <div class="mh-work">
           <h3>Work Experience</h3>
-          <div [class.active]="scrollBox" class="mh-experience-details scroll-tr">
+          <div [class.active]="scroll.ScrollBox.education" class="mh-experience-details scroll-tr">
 
             <div class="mh-work-item" *ngFor="let even of data.experience">
               <h4>{{even.title}}<a [href]="even.href">{{even.btn}}</a></h4>

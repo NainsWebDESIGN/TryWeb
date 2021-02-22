@@ -13,6 +13,7 @@ import { EducationComponent } from './education/education.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { BlogComponent } from './blog/blog.component';
+import { ListenService } from '@service/Listen.service';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { BlogComponent } from './blog/blog.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ListenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

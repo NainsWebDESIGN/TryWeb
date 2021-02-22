@@ -1,5 +1,5 @@
 <main>
-  <header [class.sticky]="Sticky" class="header">
+  <header [class.sticky]="scroll.ScrollBox.header" class="header">
     <div class="wrap d-flex">
       <h1 class="logo">
         <a href=""><img src="assets/image/LOGO.png" alt=""></a>
@@ -11,7 +11,7 @@
       </nav>
     </div>
 
-    <a *ngIf="Sticky" class="sidemenu-toggler" (click)="MenuEffects()">
+    <a *ngIf="scroll.ScrollBox.header" class="sidemenu-toggler" (click)="MenuEffects()">
       <span></span>
       <span></span>
       <span></span>
