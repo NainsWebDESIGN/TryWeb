@@ -787,7 +787,7 @@ p.text {
 }
 .hoja {
   color: #dcdce2;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   margin-left: -140px;
@@ -824,4 +824,50 @@ p.text {
     inset 0 -17.5px 0 rgba(0, 150, 200, 0.6),
     inset -17.5px 0 0 rgba(0, 200, 250, 0.6);
   animation: rotar2 2s -0.5s linear infinite;
+}
+.scrollbx-r {
+  transition: 1s all;
+  transform: translate(200px, 200px);
+  opacity: 0;
+}
+.scrollbx-b {
+  transition: 1s all;
+  opacity: 0;
+  bottom: -200px;
+}
+.scrollbx-l {
+  transition: 1s all;
+  opacity: 0;
+  transform: translate(-200px, 200px);
+}
+.scrollbx-r.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.scrollbx-b.active {
+  opacity: 1;
+  bottom: 0;
+}
+.scrollbx-l.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.scroll-ro-l {
+  transition: 1s all;
+  transform: translate(-500px);
+  opacity: 0;
+}
+.scroll-ro-l.active {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+.scroll-ro-r {
+  transition: 1s all;
+  transform: translate(500px);
+  opacity: 0;
+}
+.scroll-ro-r.active {
+  transform: translate(0px);
+  opacity: 1;
 }

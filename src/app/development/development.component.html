@@ -1,11 +1,12 @@
-<section class="mh-service text-white" id="mh-service">
+<section class="mh-service text-white">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
         <h3>What I do</h3>
       </div>
 
-      <div class="col-sm-4" *ngFor="let even of data[0]">
+      <div [ngClass]="{'scrollbx-r': i == 2, 'scrollbx-b': i == 1, 'scrollbx-l': i == 0}" [class.active]="scrollBox[0]"
+        class="col-sm-4" *ngFor="let even of data[0];let i = index">
         <div class="mh-service-item">
           <i [class]="even.style"></i>
           <h3>{{even.name}}</h3>
@@ -20,8 +21,8 @@
 
   <div class="container">
     <div class="row">
-
-      <div class="col-sm-4" *ngFor="let even of data[1]">
+      <div [ngClass]="{'scrollbx-r': i == 2, 'scrollbx-b': i == 1, 'scrollbx-l': i == 0}" [class.active]="scrollBox[1]"
+        class="col-sm-4" *ngFor="let even of data[1];let i = index">
         <div class="mh-service-item">
           <i [class]="even.style"></i>
           <h3>{{even.name}}</h3>

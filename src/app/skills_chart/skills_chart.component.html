@@ -1,11 +1,12 @@
-<section class="mh-skills" id="mh-skills">
+<section class="mh-skills">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <div class="mh-skills-inner">
           <div class="mh-professional-skill">
             <h3> Technical Skills</h3>
-            <div class="each-skills">
+
+            <div [class.active]="scrollBox" class="each-skills scroll-ro-l">
 
               <div class="candidatos" *ngFor="let even of data.line">
                 <div class="parcial">
@@ -27,7 +28,7 @@
       <div class="col-sm-12 col-md-6">
         <div class="mh-professional-skills">
           <h3>Professional Skills</h3>
-          <ul class="mh-professional-progress">
+          <ul [class.active]="scrollBox" class="mh-professional-progress scroll-ro-r">
 
             <!-- <li *ngFor="let even of data.circle">
               <div class="mh-progress mh-progress-circle" [attr.data-progress]="even.progress"></div>
