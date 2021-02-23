@@ -31,16 +31,6 @@ export class DevelopmentComponent implements OnInit {
   data: any = [];
   scrollBox: any = [false, false];
   constructor(private http: HttpClient) { }
-  move(_Number: number) {
-    switch (_Number) {
-      case 0:
-        return '-200px';
-      case 1:
-        return '0px';
-      case 2:
-        return '200px';
-    }
-  }
   ngOnInit() {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
       this.data = el.development;
