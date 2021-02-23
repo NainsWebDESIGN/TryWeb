@@ -1,41 +1,38 @@
-import { Component, OnInit, HostListener, ViewChildren, ElementRef, QueryList, AfterViewInit, Renderer } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { AppService } from '@service/app.service';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit, AfterViewInit {
+export class BlogComponent implements OnInit {
   @ViewChildren("test") Focus: QueryList<ElementRef>;
   @HostListener('window:scroll', ['$event'])
   Scroll(_Event: any) {
     //客戶端高度
-    let clientH = _Event.path[0].scrollingElement.clientHeight;
+    // let clientH = _Event.path[0].scrollingElement.clientHeight;
     //body高度
     // let bodyH = _Event.path[0].scrollingElement.clientHeight;
     //滾動的高度
-    let scrollTop = _Event.path[0].scrollingElement.scrollTop;
+    // let scrollTop = _Event.path[0].scrollingElement.scrollTop;
     // 物件位置 + 物件高度的幾成
-    let Dom = Number(this.Focus.first.nativeElement.offsetTop) + (Number(this.Focus.first.nativeElement.clientHeight) * 0.2);
+    let Dom
+      = Number(this.Focus.first.nativeElement.offsetTop)
+      + (Number(this.Focus.first.nativeElement.clientHeight) * 0.2);
     // 客戶端高度 + 物件頂部已滾動的距離
-    let concat = Number(clientH) + Number(scrollTop);
-    this.scrollBox = concat > Dom ? true : false;
+    // let concat = Number(clientH) + Number(scrollTop);
+    this.scrollBox = this.app.scrollTop > Dom ? true : false;
   }
   data: any = [];
   scrollBox: any = false;
-  constructor(private http: HttpClient, private render: Renderer) { }
+  constructor(private http: HttpClient, private app: AppService) { }
 
   ngOnInit() {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
       this.data = el.blog;
     })
   }
-  ngAfterViewInit() {
-    // this.Focus.changes.subscribe(el => {
-    //   console.log(el);
-    //   console.log(this.Focus);
-    // })
-  }
-
 }
