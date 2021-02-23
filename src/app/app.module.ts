@@ -14,8 +14,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { BlogComponent } from './blog/blog.component';
 
-import { AppService } from '@service/app.service';
-
 
 @NgModule({
   declarations: [
@@ -34,7 +32,7 @@ import { AppService } from '@service/app.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

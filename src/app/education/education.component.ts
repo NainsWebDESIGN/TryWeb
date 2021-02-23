@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,15 +7,27 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
+  @ViewChildren("ScrollBox") ScrollAnimate: QueryList<ElementRef>;
   @HostListener('window:scroll', ['$event'])
   Scroll(_Event: any) {
     //客戶端高度
-    // let clientH = _Event.path[0].scrollingElement.clientHeight;
-    //body高度
-    // let bodyH = _Event.path[0].scrollingElement.clientHeight;
+    let clientH = _Event.path[0].scrollingElement.clientHeight;
+    //客戶端寬度
+    let clientW = _Event.path[0].scrollingElement.clientWidth;
     //滾動的高度
     let scrollTop = _Event.path[0].scrollingElement.scrollTop;
-    this.scrollBox = scrollTop > 2133 ? true : false;
+    if (clientW > 767) {
+      if (this.ScrollAnimate) {
+        // 物件位置 + 物件高度的幾成
+        let Scroll = this.ScrollAnimate.first.nativeElement;
+        let Dom = Number(Scroll.offsetParent.offsetTop) + (Number(Scroll.clientHeight) * 0.31);
+        // 客戶端高度 + 物件頂部已滾動的距離
+        let concat = Number(clientH) + Number(scrollTop);
+        this.scrollBox = concat > Dom ? true : false;
+      }
+    } else {
+      this.scrollBox = true;
+    }
   }
   data: any = { education: [], experience: [] };
   scrollBox: boolean = false;

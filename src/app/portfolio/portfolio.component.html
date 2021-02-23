@@ -9,14 +9,15 @@
         <div class="col-sm-12 portfolio-nav" id="filter-button">
           <ul [class.active]="scrollBox[0]" class="scroll-big-header">
 
-            <li *ngFor="let even of data.title" [class.current]="header == even.value" (click)="check(even.value)">
+            <li class="MarginBT" *ngFor="let even of data.title" [class.current]="header == even.value"
+              (click)="check(even.value)">
               <span>{{even.title}}</span>
             </li>
 
           </ul>
         </div>
 
-        <div class="mh-project-gallery col-sm-12" id="mh-project-gallery">
+        <div #ScrollBox class="mh-project-gallery col-sm-12" id="mh-project-gallery">
           <div [class.active]="scrollBox[1]" class="portfolioContainer row scroll-tr">
 
             <div *ngFor="let even of data.content" [class]="even.filter + ' col-md-4 grid-item'">
