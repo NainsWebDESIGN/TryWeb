@@ -17,10 +17,10 @@
           </ul>
         </div>
 
-        <div #ScrollBox class="mh-project-gallery col-sm-12" id="mh-project-gallery">
+        <div class="mh-project-gallery col-sm-12" id="mh-project-gallery">
           <div [class.active]="scrollBox[1]" class="portfolioContainer row scroll-tr">
 
-            <div *ngFor="let even of data.content" [class]="even.filter + ' col-md-4 grid-item'">
+            <div #ScrollBox *ngFor="let even of data.content" [class]="even.filter + ' col-md-4 grid-item'">
               <figure>
                 <img [src]="even.image" alt="">
                 <figcaption class="fig-caption">

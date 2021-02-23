@@ -4,9 +4,9 @@
       <div class="col-smd-12 col-md-6">
         <div class="mh-education">
           <h3>Education</h3>
-          <div #ScrollBox [class.active]="scrollBox" class="mh-education-details scroll-tr">
+          <div [class.active]="scrollBox" class="mh-education-details scroll-tr">
 
-            <div class="mh-education-item" *ngFor="let even of data.education; let i = index">
+            <div #ScrollBox class="mh-education-item" *ngFor="let even of data.education; let i = index">
               <h4>{{even.title}}<a [href]="even.href">{{even.btn}}</a></h4>
               <div class="mh-eduyear">{{even.date}}</div>
               <p>{{even.content}}</p>
