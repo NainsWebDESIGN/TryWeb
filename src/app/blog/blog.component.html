@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h3>Featured Posts</h3>
+        <h3>{{"Featured Posts" | changeLang: lang.LangObj}}</h3>
       </div>
       <br><br><br><br>
 
@@ -11,16 +11,16 @@
         <div class="mh-blog-item dar-bg">
           <img [src]="even.image" alt="" class="img-fluid">
           <div class="blog-inner">
-            <h2><a href="">Google Starts crawl</a></h2>
+            <h2><a href="">{{"Google Starts crawl" | changeLang: lang.LangObj}}</a></h2>
             <br>
             <div class="mh-blog-post-info">
               <ul>
-                <li>Post on <a href="">{{even.date}}</a></li>
-                <li>Post <a href="">{{even.name}}</a></li>
+                <li>{{"Post on" | changeLang: lang.LangObj}} <a href="">{{even.date}}</a></li>
+                <li>{{"Post" | changeLang: lang.LangObj}} <a href="">{{even.name}}</a></li>
               </ul>
             </div>
-            <p>{{even.content}}</p>
-            <a href="">Read More</a>
+            <p>{{even.content | changeLang: lang.LangObj}}</p>
+            <a href="">{{"Read More" | changeLang: lang.LangObj}}</a>
           </div>
         </div>
       </div>

@@ -8,5 +8,5 @@ import { LanguageService } from '@service/Language.service';
   providers: [LanguageService]
 })
 export class AppComponent {
-  title = 'app';
+  constructor(public lang: LanguageService) { }
 }

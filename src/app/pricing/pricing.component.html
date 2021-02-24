@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-white text-left">
-        <h3>Pricing Table</h3>
+        <h3>{{"Pricing Table" | changeLang: lang.LangObj}}</h3>
       </div>
       <br><br><br><br><br>
 
@@ -10,13 +10,13 @@
         [class.active]="scrollBox" *ngFor="let even of data; let i = index" class="col-md-4">
         <div class="pricing dark-bg">
           <i [class]="even.style"></i>
-          <h4>{{even.title}}</h4>
-          <p>{{even.content}}</p>
+          <h4>{{even.title | changeLang: lang.LangObj}}</h4>
+          <p>{{even.content | changeLang: lang.LangObj}}</p>
           <h5>$ {{even.price}}</h5>
           <ul>
-            <li *ngFor="let value of even.work">{{value}}</li>
+            <li *ngFor="let value of even.work">{{value | changeLang: lang.LangObj}}</li>
           </ul>
-          <a href="" class="btn btn-fill">Hire me</a>
+          <a href="" class="btn btn-fill">{{"Hire me" | changeLang: lang.LangObj}}</a>
         </div>
       </div>
 
