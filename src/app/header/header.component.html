@@ -6,12 +6,12 @@
       </h1>
       <nav class="menu">
         <ul>
-          <li *ngFor="let even of header"><a [href]="even.href">{{even.title}}</a></li>
+          <li *ngFor="let even of header"><a [href]="even.href">{{even.title | changeLang: lang.LangObj}}</a></li>
         </ul>
       </nav>
     </div>
 
-    <a *ngIf="Sticky" class="sidemenu-toggler" (click)="MenuEffects()">
+    <a class="sidemenu-toggler" (click)="MenuEffects()">
       <span></span>
       <span></span>
       <span></span>
@@ -21,16 +21,25 @@
       <a class="close" (click)="MenuEffects('')"></a>
       <nav>
         <ul>
-          <li *ngFor="let even of header" (click)='MenuEffects("false")'><a [href]="even.href">{{even.title}}</a></li>
+          <li *ngFor="let even of header" (click)='MenuEffects("false")'>
+            <a [href]="even.href">{{even.title | changeLang: lang.LangObj}}</a>
+          </li>
         </ul>
       </nav>
       <footer>
+        <div class="langbtn">
+          <button class="btn btn-info btnchild" (click)='ChangeLang("zh-tw")'>中文</button>
+          <button class="btn btn-info btnchild" (click)='ChangeLang("en-us")'>English</button>
+        </div>
         <div class="social">
           <a href=""><img src="assets/image/facebook.png" alt=""></a>
           <a href=""><img src="assets/image/ig.png" alt=""></a>
           <a href=""><img src="assets/image/phone.png" alt=""></a>
         </div>
-        <p>2020-2021, Made with love by <a href="">Nains</a> Designers</p>
+        <p>
+          {{"2020-2021, Made with love by" | changeLang: lang.LangObj}}
+          <a href="">{{"Nains" | changeLang: lang.LangObj}}</a> {{"Designers" | changeLang: lang.LangObj}}
+        </p>
       </footer>
     </div>
   </header>

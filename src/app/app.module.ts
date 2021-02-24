@@ -13,6 +13,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { BlogComponent } from './blog/blog.component';
 
+import { LanguageService } from '@service/Language.service';
+import { LanguagePipe } from '@pipe/language.pipe';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +28,14 @@ import { BlogComponent } from './blog/blog.component';
     EducationComponent,
     PortfolioComponent,
     PricingComponent,
-    BlogComponent
+    BlogComponent,
+    LanguagePipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

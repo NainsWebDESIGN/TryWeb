@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '@service/Language.service';
 
 @Component({
   selector: 'app_header',
@@ -20,7 +21,7 @@ export class HeaderComponent implements OnInit {
     let scrollTop = _Event.path[0].scrollingElement.scrollTop;
     this.Sticky = (scrollTop > 0) ? true : false;
   }
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public lang: LanguageService) { }
   MenuEffects(_Boolin: string) {
     switch (_Boolin) {
       case 'false':
@@ -30,6 +31,10 @@ export class HeaderComponent implements OnInit {
         this.menu = !this.menu;
         break;
     }
+  }
+  ChangeLang(_Lang: string) {
+    this.lang.getLang(_Lang);
+    this.MenuEffects('false')
   }
   ngOnInit() {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="section-title col-sm-12">
-        <h3>Recent Portfolio</h3>
+        <h3>{{"Recent Portfolio" | changeLang: lang.LangObj}}</h3>
       </div>
       <br><br><br><br><br>
       <div class="part col-sm-12">
@@ -11,7 +11,7 @@
 
             <li class="MarginBT" *ngFor="let even of data.title" [class.current]="header == even.value"
               (click)="check(even.value)">
-              <span>{{even.title}}</span>
+              <span>{{even.title | changeLang: lang.LangObj}}</span>
             </li>
 
           </ul>

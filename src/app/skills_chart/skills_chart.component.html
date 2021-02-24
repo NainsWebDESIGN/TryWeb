@@ -4,7 +4,7 @@
       <div class="col-sm-12 col-md-6">
         <div class="mh-skills-inner">
           <div class="mh-professional-skill">
-            <h3> Technical Skills</h3>
+            <h3> {{"Technical Skills" | changeLang: lang.LangObj}}</h3>
 
             <div #ScrollBox [class.active]="scrollBox" class="each-skills scroll-ro-l">
 
@@ -27,7 +27,7 @@
 
       <div class="col-sm-12 col-md-6">
         <div class="mh-professional-skills">
-          <h3>Professional Skills</h3>
+          <h3>{{"Professional Skills" | changeLang: lang.LangObj}}</h3>
           <ul [class.active]="scrollBox" class="mh-professional-progress scroll-ro-r">
 
             <!-- <li *ngFor="let even of data.circle">
@@ -37,22 +37,22 @@
 
             <li>
               <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-              <div class="pr-skill-name">Communcation</div>
+              <div class="pr-skill-name">{{"Communcation" | changeLang: lang.LangObj}}</div>
             </li>
 
             <li>
               <div class="mh-progress mh-progress-circle" data-progress="55"></div>
-              <div class="pr-skill-name">Team Work</div>
+              <div class="pr-skill-name">{{"Team Work" | changeLang: lang.LangObj}}</div>
             </li>
 
             <li>
               <div class="mh-progress mh-progress-circle" data-progress="86"></div>
-              <div class="pr-skill-name">Project Management</div>
+              <div class="pr-skill-name">{{"Project Management" | changeLang: lang.LangObj}}</div>
             </li>
 
             <li>
               <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-              <div class="pr-skill-name">Creativity</div>
+              <div class="pr-skill-name">{{"Creativity" | changeLang: lang.LangObj}}</div>
             </li>
 
           </ul>

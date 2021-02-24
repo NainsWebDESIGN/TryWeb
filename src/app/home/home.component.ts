@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { LanguageService } from '@service/Language.service';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +10,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild("homename") Name: ElementRef;
   @ViewChild("homedes") Des: ElementRef;
   load: boolean = false;
-  constructor() { }
-
+  Title: string = "FrontEnd Web Designer";
+  constructor(public lang: LanguageService) { }
   ngOnInit() {
+    this.lang.Language$.subscribe(el => {
+      this.Title = el == 'en-us' ? 'FrontEnd Web Designer' : '前端網頁設計師';
+      this.Des.nativeElement.innerHTML = this.Title;
+    })
+  }
+  ngAfterViewInit() {
     this.Name.nativeElement.innerHTML = this.Name.nativeElement.firstChild.textContent.replace(/\S/g, "<span>$&</span>");
     this.Des.nativeElement.innerHTML = this.Des.nativeElement.firstChild.textContent.replace(/\S/g, "<span>$&</span>");
-  }
-
-  ngAfterViewInit() {
     setTimeout(() => {
       this.load = true;
       anime.timeline({ loop: false })

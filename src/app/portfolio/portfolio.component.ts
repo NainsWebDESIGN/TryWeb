@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '@service/Language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,7 +12,7 @@ export class PortfolioComponent implements OnInit {
   data: any = { title: [], content: [] };
   header: string = '*';
   scrollBox: any = [false, false];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public lang: LanguageService) { }
   check(_Name: string) {
     this.header = _Name;
     switch (_Name) {

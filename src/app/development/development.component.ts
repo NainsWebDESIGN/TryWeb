@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '@service/Language.service';
 
 @Component({
   selector: 'app-development',
@@ -11,7 +12,7 @@ export class DevelopmentComponent implements OnInit {
   @ViewChildren("ScrollBox2") ScrollAnimate2: QueryList<ElementRef>;
   data: any = [];
   scrollBox: any = [false, false];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public lang: LanguageService) { }
   ngOnInit() {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
       this.data = el.development;

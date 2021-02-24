@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h3>What I do</h3>
+        <h3>{{"What I do" | changeLang: lang.LangObj}}</h3>
       </div>
 
       <div #ScrollBox1 [ngClass]="{'scrollbx-r': i == 2, 'scrollbx-b': i == 1, 'scrollbx-l': i == 0}"
@@ -10,7 +10,7 @@
         <div class="mh-service-item">
           <i [class]="even.style"></i>
           <h3>{{even.name}}</h3>
-          <p>{{even.content}}</p>
+          <p>{{even.content | changeLang: lang.LangObj}}</p>
         </div>
       </div>
 
@@ -26,7 +26,7 @@
         <div class="mh-service-item">
           <i [class]="even.style"></i>
           <h3>{{even.name}}</h3>
-          <p>{{even.content}}</p>
+          <p>{{even.content | changeLang: lang.LangObj}}</p>
         </div>
       </div>
 

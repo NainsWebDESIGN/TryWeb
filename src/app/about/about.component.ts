@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '@service/Language.service';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   data: any = ["Html & CSS", "Javascript", "Angular", "PHP", "Google Ads", "SEO"];
-  constructor() { }
+  constructor(public lang: LanguageService) { }
 
   ngOnInit() {
   }

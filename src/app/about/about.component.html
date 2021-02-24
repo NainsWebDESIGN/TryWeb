@@ -6,22 +6,23 @@
       </div>
       <div class="col-md-5 text-white gap">
         <br><br><br><br>
-        <h2>About Me</h2>
+        <h2>{{"About Me" | changeLang: lang.LangObj}}</h2>
         <br>
         <p>
-          Our daily mission : find and showcase the best web design inspirations and
-          trends. Every day, we publish fresh and creative new websites ideas made by
-          creative agencies and web designers from all over the world.
+          {{"Our daily mission : find and showcase the best web design inspirations and trends. Every day, we publish "
+          | changeLang: lang.LangObj}}
+          {{"fresh and creative new websites ideas made by creative agencies and web designers from all over the world."
+          | changeLang: lang.LangObj}}
         </p>
         <br>
         <div class="tag">
           <ul>
-            <li *ngFor="let even of data"><span>{{even}}</span></li>
+            <li *ngFor="let even of data"><span>{{even | changeLang: lang.LangObj}}</span></li>
           </ul>
         </div>
         <br>
         <div class="download-button">
-          <a class="btn btn-danger">Download CV</a>
+          <a class="btn btn-danger">{{"Download CV" | changeLang: lang.LangObj}}</a>
         </div>
       </div>
     </div>
