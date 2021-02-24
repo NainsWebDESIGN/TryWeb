@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ViewChildren, ElementRef, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,24 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PortfolioComponent implements OnInit {
   @ViewChildren("ScrollBox") ScrollAnimate: QueryList<ElementRef>;
-  @HostListener('window:scroll', ['$event'])
-  Scroll(_Event: any) {
-    //客戶端高度
-    let clientH = _Event.path[0].scrollingElement.clientHeight;
-    //滾動的高度
-    let scrollTop = _Event.path[0].scrollingElement.scrollTop;
-    if (this.ScrollAnimate) {
-      // 物件位置 + 物件高度的幾成
-      let Scroll = this.ScrollAnimate.first.nativeElement;
-      let Top = Number(Scroll.offsetParent.offsetParent.offsetParent.offsetTop) + Number(Scroll.offsetParent.offsetParent.offsetTop);
-      let Dom1 = Top + (Number(Scroll.clientHeight) * 0.19);
-      let Dom2 = Top + (Number(Scroll.clientHeight) * 0.49);
-      // 客戶端高度 + 物件頂部已滾動的距離
-      let concat = Number(clientH) + Number(scrollTop);
-      this.scrollBox[0] = concat > Dom1 ? true : false;
-      this.scrollBox[1] = concat > Dom2 ? true : false;
-    }
-  }
   data: any = { title: [], content: [] };
   header: string = '*';
   scrollBox: any = [false, false];
@@ -46,6 +28,21 @@ export class PortfolioComponent implements OnInit {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
       this.data.title = el.portfolio.header;
       this.data.content = el.portfolio.content;
+      addEventListener('scroll', (el: any) => {
+        //客戶端高度
+        let clientH = el.target.scrollingElement.clientHeight;
+        //滾動的高度
+        let scrollTop = el.target.scrollingElement.scrollTop;
+        // 物件位置 + 物件高度的幾成
+        let Scroll = this.ScrollAnimate.first.nativeElement;
+        let Top = Number(Scroll.offsetParent.offsetParent.offsetParent.offsetTop) + Number(Scroll.offsetParent.offsetParent.offsetTop);
+        let Dom1 = Top + (Number(Scroll.clientHeight) * 0.19);
+        let Dom2 = Top + (Number(Scroll.clientHeight) * 0.49);
+        // 客戶端高度 + 物件頂部已滾動的距離
+        let concat = Number(clientH) + Number(scrollTop);
+        this.scrollBox[0] = concat > Dom1 ? true : false;
+        this.scrollBox[1] = concat > Dom2 ? true : false;
+      })
     })
   }
 
