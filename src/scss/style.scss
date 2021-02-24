@@ -37,6 +37,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+.homename,
+.homedes {
+  opacity: 0;
+}
+.homename.active,
+.homedes.active {
+  opacity: 1;
+}
 a:hover {
   text-decoration: none;
 }

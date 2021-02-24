@@ -20,13 +20,16 @@ export class BlogComponent implements OnInit {
         let clientH = el.target.scrollingElement.clientHeight;
         //滾動的高度
         let scrollTop = el.target.scrollingElement.scrollTop;
-        // 物件位置 + 物件高度的幾成
-        let Scroll = this.ScrollAnimate.first.nativeElement;
-        let Dom = Number(Scroll.offsetTop) + (Number(Scroll.clientHeight) * 0.31);
-        // 客戶端高度 + 物件頂部已滾動的距離
-        let concat = Number(clientH) + Number(scrollTop);
-        this.scrollBox = concat > Dom ? true : false;
+        if (this.ScrollAnimate.first.nativeElement) {
+          // 物件位置 + 物件高度的幾成
+          let Scroll = this.ScrollAnimate.first.nativeElement;
+          let Dom = Number(Scroll.offsetTop) + (Number(Scroll.clientHeight) * 0.31);
+          // 客戶端高度 + 物件頂部已滾動的距離
+          let concat = Number(clientH) + Number(scrollTop);
+          this.scrollBox = concat > Dom ? true : false;
+        }
       })
     })
   }
+
 }
