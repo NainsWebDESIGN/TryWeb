@@ -27,18 +27,20 @@
         </ul>
       </nav>
       <footer>
-        <div class="langbtn">
-          <button class="btn btn-info btnchild" (click)='ChangeLang("zh-tw")'>中文</button>
-          <button class="btn btn-info btnchild" (click)='ChangeLang("en-us")'>English</button>
-        </div>
         <div class="social">
           <a href=""><img src="assets/image/facebook.png" alt=""></a>
           <a href=""><img src="assets/image/ig.png" alt=""></a>
           <a href=""><img src="assets/image/phone.png" alt=""></a>
         </div>
+        <div class="langbtn">
+          <button class="btn btn-info btnchild" (click)='ChangeLang("zh-tw")'>中文</button>
+          <button class="btn btn-info btnchild" (click)='ChangeLang("en-us")'>English</button>
+          <button class="btn btn-info btnchild" (click)='ChangeLang("en-jp")'>日文</button>
+          <button class="btn btn-info btnchild" (click)='ChangeLang("en-ta")'>ยาสุฟุมิ</button>
+        </div>
         <p>
           {{"2020-2021, Made with love by" | changeLang: lang.LangObj}}
-          <a href="">{{"Nains" | changeLang: lang.LangObj}}</a> {{"Designers" | changeLang: lang.LangObj}}
+          <a href="">Nains</a> {{"Designers" | changeLang: lang.LangObj}}
         </p>
       </footer>
     </div>

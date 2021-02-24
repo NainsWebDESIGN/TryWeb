@@ -14,7 +14,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(public lang: LanguageService) { }
   ngOnInit() {
     this.lang.Language$.subscribe(el => {
-      this.Title = el == 'en-us' ? 'FrontEnd Web Designer' : '前端網頁設計師';
+      switch (el) {
+        case 'en-us':
+          this.Title = 'FrontEnd Web Designer'
+          break;
+        case 'zh-tw':
+          this.Title = '前端網頁設計師'
+          break;
+        case 'en-jp':
+          this.Title = 'フロントエンドWebデザイナー'
+          break;
+        case 'en-ta':
+          this.Title = 'นักออกแบบเว็บไซต์ส่วนหน้า'
+          break;
+      }
       this.Des.nativeElement.innerHTML = this.Title;
     })
   }
