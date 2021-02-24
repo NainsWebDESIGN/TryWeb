@@ -11,14 +11,14 @@
       </nav>
     </div>
 
-    <a class="sidemenu-toggler" (click)="MenuEffects()">
+    <a class="sidemenu-toggler" (click)="MenuEffects('')">
       <span></span>
       <span></span>
       <span></span>
     </a>
 
     <div [class.active]="menu" class="sidemenu">
-      <a class="close" (click)="MenuEffects('')"></a>
+      <a class="close" (click)="MenuEffects('false')"></a>
       <nav>
         <ul>
           <li *ngFor="let even of header" (click)='MenuEffects("false")'>
@@ -33,11 +33,16 @@
           <a href=""><img src="assets/image/phone.png" alt=""></a>
         </div>
         <div class="langbtn">
-          <button class="btn btn-info btnchild" (click)='ChangeLang("zh-tw")'>中文</button>
-          <button class="btn btn-info btnchild" (click)='ChangeLang("en-us")'>English</button>
-          <button class="btn btn-info btnchild" (click)='ChangeLang("en-jp")'>日文</button>
-          <button class="btn btn-info btnchild" (click)='ChangeLang("en-ta")'>ยาสุฟุมิ</button>
-        </div>
+          <span class="Lang">{{"Language" | changeLang: lang.LangObj}} :</span><br><br>
+          <button class="btn btn-primary btnchild" (click)='ChangeLang("zh-tw")'>
+            {{"Chinese" | changeLang: lang.LangObj}}</button>
+          <button class="btn btn-primary btnchild" (click)='ChangeLang("en-us")'>
+            {{"English" | changeLang: lang.LangObj}}</button>
+          <button class="btn btn-primary btnchild" (click)='ChangeLang("en-jp")'>
+            {{"Japanese" | changeLang: lang.LangObj}}</button>
+          <button class="btn btn-primary btnchild" (click)='ChangeLang("en-ta")'>
+            {{"Thai" | changeLang: lang.LangObj}}</button>
+        </div><br>
         <p>
           {{"2020-2021, Made with love by" | changeLang: lang.LangObj}}
           <a href="">Nains</a> {{"Designers" | changeLang: lang.LangObj}}
