@@ -10,6 +10,7 @@ import { LanguageService } from '@service/Language.service';
 export class HeaderComponent implements OnInit {
   menu: boolean = false;
   header: any = [];
+  Lang: boolean = false;
   Sticky: boolean = false;
   constructor(private http: HttpClient, public lang: LanguageService) { }
   MenuEffects(_Boolin: string) {
@@ -22,7 +23,11 @@ export class HeaderComponent implements OnInit {
         break;
     }
   }
+  openLang() {
+    this.Lang = !this.Lang;
+  }
   ChangeLang(_Lang: string) {
+    this.Lang = false;
     this.lang.getLang(_Lang);
     this.MenuEffects('false')
   }

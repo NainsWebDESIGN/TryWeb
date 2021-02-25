@@ -83,16 +83,33 @@ ul {
   background: #212529;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
 }
-.Lang {
-  font-size: 1.3rem;
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background: #007bff;
+  border-color: #007bff;
+  font-size: 1.13rem;
   text-transform: capitalize;
   font-family: "Varela Round", sans-serif;
 }
-.langbtn {
-  margin: 5px 0 8px 0;
+.dropdown-menu.active {
+  display: block;
 }
-.btnchild {
-  margin: 5px 3px;
+.dropdown-menu {
+  background: #212529;
+  border-radius: 5px;
+}
+.dropdown-item {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+a:not([href]) {
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown-item:hover {
+  background: #24cdd5;
 }
 .header .logo {
   margin: 0;
