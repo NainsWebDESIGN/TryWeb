@@ -32,13 +32,12 @@
           <a href=""><img src="assets/image/ig.png" alt=""></a>
           <a href=""><img src="assets/image/phone.png" alt=""></a>
         </div>
-        <div class="dropdown show">
-          <a class="btn btn-secondary dropdown-toggle" (click)='openLang()' role="button" id="dropdownMenuLink"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group dropup">
+          <button type="button" (click)='openLang()' class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             {{"Language" | changeLang: lang.LangObj}}
-          </a>
-
-          <div [class.active]="Lang" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          </button>
+          <div [class.active]="Lang" class="dropdown-menu">
             <a class="dropdown-item" (click)='ChangeLang("zh-tw")'>{{"Chinese" | changeLang: lang.LangObj}}</a>
             <a class="dropdown-item" (click)='ChangeLang("en-us")'>{{"English" | changeLang: lang.LangObj}}</a>
             <a class="dropdown-item" (click)='ChangeLang("en-jp")'>{{"Japanese" | changeLang: lang.LangObj}}</a>

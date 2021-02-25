@@ -83,9 +83,10 @@ ul {
   background: #212529;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
 }
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle {
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
   color: #fff;
   background: #007bff;
   border-color: #007bff;
