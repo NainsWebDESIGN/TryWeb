@@ -40,18 +40,13 @@ export class Skills_chartComponent implements OnInit {
 
     })
     this.share.circle$.subscribe(el => {
-      let data = [
-        { name: "", value: 0.95, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } },
-        { name: "1", value: 0.49, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } },
-        { name: "2", value: 0.86, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } },
-        { name: "3", value: 0.72, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } }
-      ]
+      let circle = this.data.circle;
       if (el) {
-        for (let i = 0; i < data.length; i++) {
-          $('#circle' + data[i].name).circleProgress({
-            value: data[i].value,
-            size: data[i].size,
-            fill: data[i].fill
+        for (let i = 0; i < circle.length; i++) {
+          $('#' + circle[i].id).circleProgress({
+            value: (Number(circle[i].progress) / 100),
+            size: 100,
+            fill: { gradient: ["#3bb78f", "#0bab64"] }
           })
         }
       }

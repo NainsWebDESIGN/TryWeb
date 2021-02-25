@@ -30,32 +30,11 @@
           <h3>{{"Professional Skills" | changeLang: lang.LangObj}}</h3>
           <ul [class.active]="scrollBox" class="mh-professional-progress scroll-ro-r">
 
-            <li>
-              <div id="circle" class="mh-progress mh-progress-circle">
-                <span class="circle-parent">95%</span>
+            <li *ngFor="let even of data.circle">
+              <div [id]="even.id" class="mh-progress mh-progress-circle">
+                <span class="circle-parent">{{even.progress}}%</span>
               </div>
-              <div class="pr-skill-name">{{"Communcation" | changeLang: lang.LangObj}}</div>
-            </li>
-
-            <li>
-              <div id="circle1" class="mh-progress mh-progress-circle">
-                <span class="circle-parent">49%</span>
-              </div>
-              <div class="pr-skill-name">{{"Team Work" | changeLang: lang.LangObj}}</div>
-            </li>
-
-            <li>
-              <div id="circle2" class="mh-progress mh-progress-circle">
-                <span class="circle-parent">86%</span>
-              </div>
-              <div class="pr-skill-name">{{"Project Management" | changeLang: lang.LangObj}}</div>
-            </li>
-
-            <li>
-              <div id="circle3" class="mh-progress mh-progress-circle">
-                <span class="circle-parent">72%</span>
-              </div>
-              <div class="pr-skill-name">{{"Creativity" | changeLang: lang.LangObj}}</div>
+              <div class="pr-skill-name">{{even.name | changeLang: lang.LangObj}}</div>
             </li>
 
           </ul>

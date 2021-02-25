@@ -87,19 +87,23 @@
     "circle": [
       {
         "name": "Communcation",
-        "progress": "95"
+        "progress": "95",
+        "id": "circle"
       },
       {
         "name": "Team Work",
-        "progress": "55"
+        "progress": "55",
+        "id": "circle1"
       },
       {
         "name": "Project Management",
-        "progress": "86"
+        "progress": "86",
+        "id": "circle2"
       },
       {
         "name": "Creativity",
-        "progress": "95"
+        "progress": "72",
+        "id": "circle3"
       }
     ]
   },
