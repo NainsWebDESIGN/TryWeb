@@ -371,8 +371,11 @@ section.home {
   margin: 0 auto;
   float: none;
   width: 48%;
-  margin-bottom: 30px;
   text-align: center;
+}
+.pr-skill-name {
+  position: relative;
+  top: -30px;
 }
 .mh-progress {
   margin-bottom: 10px;
@@ -402,8 +405,15 @@ section.home {
   width: 100px;
   height: 100px;
 }
+.circle-parent {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+  top: -75px;
+  font-family: "Poppins", sans-serif;
+}
 .mh-progress path:nth-child(1) {
-  stroke: rgba(0, 0, 0, 0.7);
+  stroke: #fff;
 }
 
 .mh-progress path:nth-child(2) {
@@ -461,6 +471,15 @@ section.home {
   -webkit-animation-duration: 1.3s;
   -webkit-animation-name: animationProgress;
   font-family: "Poppins", sans-serif;
+}
+
+.persant {
+  position: relative;
+  color: #fff;
+  // top: -40px;
+  // left: -75px;
+  // font-size: 1.9rem;
+  // font-weight: bold;
 }
 
 .mh-experience h3 {

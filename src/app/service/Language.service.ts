@@ -8,7 +8,6 @@ export class LanguageService {
     private LangSubject: BehaviorSubject<string> = new BehaviorSubject(this.Language);
     Language$: Observable<string> = this.LangSubject.asObservable();
     LangObj: any = {};
-
     constructor(private http: HttpClient) { }
     getLang(_Lang: string) {
         this.http.get('assets/fill/' + _Lang + '.json').subscribe(json => { this.LangObj = json; })

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '@service/Language.service';
 
@@ -11,16 +11,6 @@ export class HeaderComponent implements OnInit {
   menu: boolean = false;
   header: any = [];
   Sticky: boolean = false;
-  @HostListener('window:scroll', ['$event'])
-  Scroll(_Event: any) {
-    //客戶端高度
-    // let clientH = _Event.path[0].scrollingElement.clientHeight;
-    //body高度
-    // let bodyH = _Event.path[0].scrollingElement.clientHeight;
-    //滾動的高度
-    let scrollTop = _Event.path[0].scrollingElement.scrollTop;
-    this.Sticky = (scrollTop > 0) ? true : false;
-  }
   constructor(private http: HttpClient, public lang: LanguageService) { }
   MenuEffects(_Boolin: string) {
     switch (_Boolin) {
@@ -39,6 +29,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
       this.header = el.header;
+      document.body.addEventListener('scroll', () => {
+        //滾動的高度
+        let scrollTop = Number(document.body.scrollTop);
+        this.Sticky = (scrollTop > 0) ? true : false;
+      })
     })
   }
 
