@@ -29,20 +29,19 @@ export class PortfolioComponent implements OnInit {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
       this.data.title = el.portfolio.header;
       this.data.content = el.portfolio.content;
-      addEventListener('scroll', (el: any) => {
+      document.body.addEventListener('scroll', () => {
         //客戶端高度
-        let clientH = el.target.scrollingElement.clientHeight;
+        let clientH = Number($(window).height());
         //滾動的高度
-        let scrollTop = el.target.scrollingElement.scrollTop;
+        let scrollTop = Number(document.body.scrollTop);
         // 物件位置 + 物件高度的幾成
         let Scroll = this.ScrollAnimate.first.nativeElement;
         let Top = Number(Scroll.offsetParent.offsetParent.offsetParent.offsetTop) + Number(Scroll.offsetParent.offsetParent.offsetTop);
         let Dom1 = Top + (Number(Scroll.clientHeight) * 0.19);
         let Dom2 = Top + (Number(Scroll.clientHeight) * 0.49);
         // 客戶端高度 + 物件頂部已滾動的距離
-        let concat = Number(clientH) + Number(scrollTop);
-        this.scrollBox[0] = concat > Dom1 ? true : false;
-        this.scrollBox[1] = concat > Dom2 ? true : false;
+        this.scrollBox[0] = (clientH + scrollTop) > Dom1 ? true : false;
+        this.scrollBox[1] = (clientH + scrollTop) > Dom2 ? true : false;
       })
     })
   }

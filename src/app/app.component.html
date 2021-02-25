@@ -1,20 +1,2 @@
-<app_header></app_header>
-<br><br><br><br><br>
-<app-home></app-home>
-<br id="about"><br><br><br><br>
-<app-about></app-about>
-<br id="mh-service"><br><br><br><br>
-<app-development></app-development>
-<br id="mh-skills"><br><br><br><br>
-<app-skills_chart></app-skills_chart>
-<br id="mh-experience"><br><br><br><br>
-<app-education></app-education>
-<br id="mh-portfolio"><br><br><br><br>
-<app-portfolio></app-portfolio>
-<br id="pricing"><br><br><br><br>
-<app-pricing></app-pricing>
-<br id="mh-blog"><br><br><br><br>
-<app-blog></app-blog>
-<footer class="Indexfooter">
-    Copyright &copy; 2021 <a href="">Nains.</a> {{"All rights reserved." | changeLang: lang.LangObj}}
-</footer>
+<app-Load *ngIf="!load"></app-Load>
+<app_header *ngIf="load"></app_header>

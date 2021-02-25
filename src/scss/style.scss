@@ -6,7 +6,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 *,
 *::before,
@@ -28,7 +28,8 @@ ul {
 }
 body {
   background-color: #212529;
-  height: 2000px;
+  // height: 940px;
+  overflow-x: hidden;
 }
 ol,
 ul {

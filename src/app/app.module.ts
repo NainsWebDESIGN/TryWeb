@@ -12,6 +12,7 @@ import { EducationComponent } from './education/education.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { BlogComponent } from './blog/blog.component';
+import { LoadComponent } from './Load/Load.component';
 
 import { LanguageService } from '@service/Language.service';
 import { LanguagePipe } from '@pipe/language.pipe';
@@ -29,7 +30,8 @@ import { LanguagePipe } from '@pipe/language.pipe';
     PortfolioComponent,
     PricingComponent,
     BlogComponent,
-    LanguagePipe
+    LanguagePipe,
+    LoadComponent
   ],
   imports: [
     BrowserModule,

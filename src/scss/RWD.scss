@@ -1,12 +1,17 @@
 @media (max-width: 767px) {
+  body {
+    height: 850px;
+  }
   .header .sidemenu {
     width: 100%;
   }
   .header .sidemenu nav a {
     font-size: 1rem;
   }
+  .MarginBT {
+    height: 49px;
+  }
 }
-
 @media (min-width: 767px) and (max-width: 991px) {
   .header .sidemenu {
     width: 70%;
@@ -21,11 +26,7 @@
     display: none;
   }
 }
-@media (max-width: 767px) {
-  .MarginBT {
-    height: 49px;
-  }
-}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
