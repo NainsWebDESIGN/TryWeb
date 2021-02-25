@@ -11,6 +11,12 @@ export class HeaderComponent implements OnInit {
   menu: boolean = false;
   header: any = [];
   Lang: boolean = false;
+  langBox: any = [
+    { value: 'zh-tw', lang: 'Chinese' },
+    { value: 'en-us', lang: 'English' },
+    { value: 'en-jp', lang: 'Japanese' },
+    { value: 'en-ta', lang: 'Thai' }
+  ]
   Sticky: boolean = false;
   constructor(private http: HttpClient, public lang: LanguageService) { }
   MenuEffects(_Boolin: string) {

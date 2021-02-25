@@ -37,11 +37,8 @@
             aria-haspopup="true" aria-expanded="false">
             {{"Language" | changeLang: lang.LangObj}}
           </button>
-          <div [class.active]="Lang" class="dropdown-menu">
-            <a class="dropdown-item" (click)='ChangeLang("zh-tw")'>{{"Chinese" | changeLang: lang.LangObj}}</a>
-            <a class="dropdown-item" (click)='ChangeLang("en-us")'>{{"English" | changeLang: lang.LangObj}}</a>
-            <a class="dropdown-item" (click)='ChangeLang("en-jp")'>{{"Japanese" | changeLang: lang.LangObj}}</a>
-            <a class="dropdown-item" (click)='ChangeLang("en-ta")'>{{"Thai" | changeLang: lang.LangObj}}</a>
+          <div [class.active]="Lang" class="dropdown-menu" *ngFor="let even of langBox">
+            <a class="dropdown-item" (click)='ChangeLang(even.value)'>{{even.lang | changeLang: lang.LangObj}}</a>
           </div>
         </div><br>
         <p>
