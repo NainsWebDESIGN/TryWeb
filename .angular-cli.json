@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "RWD Component",
+      "outDir": "Nains Web Mockup",
       "assets": ["assets", "favicon.ico", "scss"],
       "index": "index.html",
       "main": "main.ts",

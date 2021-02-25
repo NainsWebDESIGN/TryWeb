@@ -41,10 +41,10 @@ export class Skills_chartComponent implements OnInit {
     })
     this.share.circle$.subscribe(el => {
       let data = [
-        { name: "", value: 0.95, size: 100, fill: { gradient: ["#0bceaf"] } },
-        { name: "1", value: 0.49, size: 100, fill: { gradient: ["#0bceaf"] } },
-        { name: "2", value: 0.86, size: 100, fill: { gradient: ["#0bceaf"] } },
-        { name: "3", value: 0.72, size: 100, fill: { gradient: ["#0bceaf"] } }
+        { name: "", value: 0.95, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } },
+        { name: "1", value: 0.49, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } },
+        { name: "2", value: 0.86, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } },
+        { name: "3", value: 0.72, size: 100, fill: { gradient: ["#3bb78f", "#0bab64"] } }
       ]
       if (el) {
         for (let i = 0; i < data.length; i++) {

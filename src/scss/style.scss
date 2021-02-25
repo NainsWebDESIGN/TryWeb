@@ -183,7 +183,8 @@ a:not([href]) {
   color: #fff;
   transform: translate3d(100%, 0, 0);
   transition: transform 0.5s ease-in-out;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .header .sidemenu.active {
   transform: translate3d(0, 0, 0);
