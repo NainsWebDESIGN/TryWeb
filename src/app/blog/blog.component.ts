@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '@service/Language.service';
+import { ApiService } from '@service/Api.service';
 
 @Component({
   selector: 'app-blog',
@@ -11,7 +12,7 @@ export class BlogComponent implements OnInit {
   @ViewChildren("ScrollBox") ScrollAnimate: QueryList<ElementRef>;
   data: any = [];
   scrollBox: any = false;
-  constructor(private http: HttpClient, public lang: LanguageService) { }
+  constructor(private http: HttpClient, public lang: LanguageService, private api: ApiService) { }
 
   ngOnInit() {
     this.http.get('assets/json/databass.json').subscribe((el: any) => {
@@ -30,6 +31,11 @@ export class BlogComponent implements OnInit {
         }
       })
     })
+    const req = { type: 'blog' }
+    this.api.postServer(149, req);
+    this.api.data$.subscribe(el => {
+      console.log(el);
+    });
   }
 
 }

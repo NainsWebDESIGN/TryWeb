@@ -1,12 +1,17 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { LanguageService } from '@service/Language.service';
 import { ShareDataService } from '@service/ShareData.service';
+import { ApiService } from '@service/Api.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [LanguageService, ShareDataService]
+  providers: [
+    LanguageService,
+    ShareDataService,
+    ApiService
+  ]
 })
 export class AppComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])

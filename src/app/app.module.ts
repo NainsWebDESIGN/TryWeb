@@ -16,6 +16,7 @@ import { LoadComponent } from './Load/Load.component';
 
 import { LanguageService } from '@service/Language.service';
 import { ShareDataService } from '@service/ShareData.service';
+import { ApiService } from '@service/Api.service';
 import { LanguagePipe } from '@pipe/language.pipe';
 
 
@@ -38,7 +39,7 @@ import { LanguagePipe } from '@pipe/language.pipe';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [LanguageService, ShareDataService],
+  providers: [LanguageService, ShareDataService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

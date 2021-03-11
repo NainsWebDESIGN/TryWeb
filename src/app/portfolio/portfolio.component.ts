@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '@service/Language.service';
+import { ApiService } from '@service/Api.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,7 +13,7 @@ export class PortfolioComponent implements OnInit {
   data: any = { title: [], content: [] };
   header: string = '*';
   scrollBox: any = [false, false];
-  constructor(private http: HttpClient, public lang: LanguageService) { }
+  constructor(private http: HttpClient, public lang: LanguageService, private api: ApiService) { }
   check(_Name: string) {
     this.header = _Name;
     switch (_Name) {
@@ -44,6 +45,8 @@ export class PortfolioComponent implements OnInit {
         this.scrollBox[1] = (clientH + scrollTop) > Dom2 ? true : false;
       })
     })
+    const req = { type: 'portfolio' };
+    this.api.postServer(149, req);
   }
 
 }
